@@ -10,6 +10,10 @@ return {
         "typescript-language-server",
         "css-lsp",
         "gopls",
+        "gci",
+        "golangci-lint",
+        "hclfmt",
+        "terraform-ls",
       })
     end,
   },
