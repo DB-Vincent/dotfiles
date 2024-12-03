@@ -25,7 +25,7 @@ require("conform").setup({
 		html = { { "prettierd", "prettier" } },
 		css = { { "prettierd", "prettier" } },
 		terraform = { { "terraform_fmt" } },
-		yaml = { { "yaml_fix" } },
+		yaml = { { "yamlfmt" } },
 		-- Use the "*" filetype to run formatters on all filetypes.
 		["*"] = { "codespell" },
 		-- Use the "_" filetype to run formatters on filetypes that don't
