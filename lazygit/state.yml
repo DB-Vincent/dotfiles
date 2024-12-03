@@ -1,8 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/vdeborger/Coding/vincentdeborger.be
+- /home/vdeborger/Coding/radnet
 - /home/vdeborger/.config
 - /home/vdeborger/Coding/scheduscaler
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- q
 hidecommandlog: false
 ignorewhitespaceindiffview: false
