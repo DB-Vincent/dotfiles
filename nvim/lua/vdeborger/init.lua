@@ -17,6 +17,19 @@ require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		go = { "gofmt" },
-		javascript = { "prettierd", "prettier", stop_after_first = true },
+		typescript = { { "prettierd", "prettier" } },
+		typescriptreact = { { "prettierd", "prettier" } },
+		javascript = { { "prettierd", "prettier" } },
+		javascriptreact = { { "prettierd", "prettier" } },
+		json = { { "prettierd", "prettier" } },
+		html = { { "prettierd", "prettier" } },
+		css = { { "prettierd", "prettier" } },
+		terraform = { { "terraform_fmt" } },
+		yaml = { { "yaml_fix" } },
+		-- Use the "*" filetype to run formatters on all filetypes.
+		["*"] = { "codespell" },
+		-- Use the "_" filetype to run formatters on filetypes that don't
+		-- have other formatters configured.
+		["_"] = { "trim_whitespace" },
 	},
 })
