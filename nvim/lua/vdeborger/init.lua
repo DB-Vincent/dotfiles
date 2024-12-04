@@ -33,3 +33,7 @@ require("conform").setup({
 		["_"] = { "trim_whitespace" },
 	},
 })
+
+require("render-markdown").setup({
+	preset = "obsidian",
+})

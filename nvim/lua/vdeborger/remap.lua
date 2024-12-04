@@ -2,6 +2,19 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>w", "<C-w>", { noremap = true })
 
+-- <C-s> to search/replace the current word object (saves to h register)
+vim.keymap.set("n", "<C-s>", '"hyiw:%s/<C-r>h//g<left><left>', { noremap = true })
+
+-- System clipboard copy/pasting
+vim.keymap.set("v", "<leader>yy", '"+y')
+vim.keymap.set({ "n", "v" }, "<leader>pp", '"+p')
+-- Primary selection
+vim.keymap.set("v", "<leader>y1", '"*y')
+vim.keymap.set({ "n", "v" }, "<leader>p1", '"*p')
+-- Whole file
+vim.keymap.set("n", "<leader>ya", ":%y+<cr>")
+vim.keymap.set("n", "<leader>pa", 'ggVG"+p')
+
 -- File explorer
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
