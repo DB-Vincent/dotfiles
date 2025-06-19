@@ -1,0 +1,92 @@
+configuration {
+  show-icons: true;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+* {
+    background:     #1A1B24FF;
+    background-alt: #1A1B26AA;
+    foreground:     #C0CAF5FF;
+    selected:       #7AA2F7FF;
+    active:         #7DCFFFFF;
+    urgent:         #FF9E64FF;
+}
+
+window {
+  margin: 0px;
+  padding: 0px;
+  border: 0px solid;
+  width: 700px;
+  border-radius: 12px;
+  border-color: @selected;
+  background-color: @background;
+}
+
+mainbox {
+  spacing: 10px;
+  padding: 20px;
+
+  border-color: @selected;
+  children: [ inputbar, listview ];
+} 
+
+inputbar {
+  spacing: 12px;
+  padding: 16px;
+  border: 0px solid;
+  border-radius: 12px;
+  border-color: @selected;
+  background-color: @background-alt;
+  text-color: @foreground;
+}
+
+listview {
+  columns: 2;
+  lines: 10;
+  layout: vertical;
+  dynamic: true;
+  spacing: 6px;
+  text-color: @selected;
+}
+
+element {
+  orientation: horizontal;
+  children: [ element-icon, element-text ];
+  spacing: 6px;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+element-icon {
+  size: 1.25em;
+}
+
+element-text {
+  vertical-align: 0.5;
+}
+
+element normal normal {
+  background-color: @background-alt;
+  text-color: @foreground;
+}
+
+element selected normal {
+  background-color: @selected;
+  text-color: @foreground;
+}
+
+element alternate normal {
+  background-color: @background-alt;
+  text-color: @foreground;
+}
+
+entry {
+  text-color: @foreground;
+}
