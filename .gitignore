@@ -1,0 +1,13 @@
+# By default, ignore everything
+*
+*/
+
+# Add directories that should be pushed
+!nvim/
+!nvim/**
+!hypr/
+!hypr/**
+!waybar/
+!waybar/**
+!rofi/
+!rofi/**
