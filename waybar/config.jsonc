@@ -26,6 +26,9 @@
     "on-scroll-down": "hyprctl dispatch workspace +1",
     "format": "{icon}",
     "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 3, // By default, open 3 workspaces
+    },
   },
   "bluetooth": {
     "format": "  {status} ",
