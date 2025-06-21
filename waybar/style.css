@@ -42,8 +42,12 @@ window#waybar {
   color: @fg;
 }
 
-#pulseaudio {
+#bluetooth {
   color: @blue;
+}
+
+#pulseaudio {
+  color: @magenta;
 }
 
 #network {

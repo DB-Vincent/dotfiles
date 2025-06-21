@@ -10,8 +10,8 @@
   ],
   "modules-right": [
     "pulseaudio",
+    "bluetooth",
     "network",
-    "temperature",
     "battery",
     "cpu",
     "memory",
@@ -27,35 +27,67 @@
     "format": "{icon}",
     "on-click": "activate",
   },
+  "bluetooth": {
+    "format": "  {status} ",
+    "format-connected": "  {device_alias} ",
+    "format-connected-battery": "  {device_alias}{device_battery_percentage}% ",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "~/.config/rofi/scripts/bluetooth-menu"
+  },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
-  "cpu": {
-    "format": "CPU {usage}%",
-    "tooltip": false
-  },
   "memory": {
-    "format": "RAM {}%"
+    "format": "  {used:0.1f}G/{total:0.1f}G ",
+    "tooltip": true,
   },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "TEMP {temperatureC}°C",
-  },
+  "cpu": {
+    "format": "  {usage}% ",
+    "tooltip": true
+  }, 
   "battery": {
     "states": {
-      "warning": 30,
-      "critical": 15
+      "warning": 35,
+      "critical": 20
     },
-    "format": "BAT {capacity}%",
-  },
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""]
+  }, 
   "network": {
-    "interface": "en*",
-    "family": "ipv4",
-    "format-wifi": "WIFI {signalStrength}%",
-    "format-ethernet": "ETH {ipaddr}/{cidr}",
+  	"format": "{ifname}",
+  	"format-wifi": "  {essid} ({signalStrength}%)",
+  	"format-ethernet": "  {ifname}",
+  	"format-disconnected": "  ",
+  	"tooltip-format": "{ifname}",
+  	"tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+  	"tooltip-format-ethernet": "  {ifname}",
+  	"tooltip-format-disconnected": "Disconnected",
+  	"max-length": 50
   },
   "pulseaudio": {
-    "format": "VOL {volume}%",
-  },
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": " {volume}% {format_source}",
+    "format-bluetooth-muted": " {icon}  {format_source}",
+    "format-muted": "  {format_source}",
+    "format-source": "  {volume}%",
+    "format-source-muted": "  ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  }, 
 }

@@ -9,6 +9,7 @@ My personal collection of config files for my Linux environments
 - `hyprland`: [https://wiki.hypr.land/Getting-Started/Installation/](https://wiki.hypr.land/Getting-Started/Installation/)
 - `dunst`: `sudo dnf install dunst -y`
 - `swaybg`: `sudo dnf install swaybg -y`
+- `pavucontrol`: `sudo dnf install pavucontrol`
 
 ## Clean up
 
