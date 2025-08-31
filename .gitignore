@@ -7,7 +7,7 @@
 !nvim/**
 !hypr/
 !hypr/**
-!waybar/
-!waybar/**
 !rofi/
 !rofi/**
+!hyprpanel/
+!hyprpanel/**
