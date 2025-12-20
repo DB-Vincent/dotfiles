@@ -1,0 +1,59 @@
+@define-color accent #33ccff;
+@define-color accent2 #33ccff;
+@define-color accent-bg rgba(51, 204, 255, 0.15);
+
+@define-color bg       #12151a;
+@define-color fg       #dadada;
+@define-color fg-muted #9da3b0;
+@define-color warn     #ffcc00;
+@define-color crit     #ff5577;
+
+* {
+  font-family: "JetBrains Mono";
+  font-size: 11pt;
+  min-height: 0;
+}
+
+window#waybar {
+  margin: 5px 0px;
+  background: transparent;
+  color: @fg;
+}
+
+tooltip {
+  background: @bg;
+  color: @fg;
+  border: 1px solid @accent;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#battery,
+#tray {
+  padding: 0 8px;
+  margin: 4px;
+  background: @bg;
+}
+
+#workspaces {
+  margin: 4px;
+  background: @bg;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  color: @fg-muted;
+  background: transparent;
+}
+
+#workspaces button.active {
+  background: @accent;
+  color: @bg;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  background: @crit;
+  color: @bg;
+}
