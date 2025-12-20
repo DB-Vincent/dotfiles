@@ -1,59 +1,77 @@
-@define-color accent #33ccff;
-@define-color accent2 #33ccff;
-@define-color accent-bg rgba(51, 204, 255, 0.15);
+@define-color bg #12151a;
+@define-color fg #dadada;
 
-@define-color bg       #12151a;
-@define-color fg       #dadada;
-@define-color fg-muted #9da3b0;
-@define-color warn     #ffcc00;
-@define-color crit     #ff5577;
+@define-color accent #39bae6;
 
+/* --- General --- */
 * {
   font-family: "JetBrains Mono";
   font-size: 11pt;
   min-height: 0;
 }
 
-window#waybar {
-  margin: 5px 0px;
+tooltip {
+  background-color: @bg;
+}
+
+/* --- Waybar Container --- */
+#waybar {
   background: transparent;
   color: @fg;
+  margin: 0px;
 }
 
-tooltip {
-  background: @bg;
-  color: @fg;
-  border: 1px solid @accent;
-}
-
-#clock,
-#network,
-#pulseaudio,
-#battery,
-#tray {
-  padding: 0 8px;
-  margin: 4px;
-  background: @bg;
-}
-
+/* --- Left Modules --- */
 #workspaces {
-  margin: 4px;
-  background: @bg;
+  background-color: @bg;
+  min-width: 0;
+  border-radius: 6px;
+  border: none;
 }
 
 #workspaces button {
-  padding: 0 6px;
-  color: @fg-muted;
+  color: @accent;
+  border-radius: 6px;
   background: transparent;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  outline: none;
 }
 
 #workspaces button.active {
-  background: @accent;
-  color: @bg;
-  font-weight: bold;
+  color: @accent;
+  background-color: rgba(153, 209, 219, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2);
 }
 
-#workspaces button.urgent {
-  background: @crit;
-  color: @bg;
+#workspaces button:hover {
+  background: rgb(41, 42, 53); /* Reference bright hover color */
 }
+
+/* --- Center Module --- */
+#clock {
+  background-color: @bg;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  min-width: 0;
+  border: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* --- Right Modules --- */
+#cpu,
+#memory,
+#bluetooth,
+#pulseaudio,
+#network,
+#tray {
+  background-color: @bg;
+  padding: 0.3rem 0.7rem;
+  margin: 0 0.2rem;
+  border-radius: 6px;
+  box-shadow: none;
+  min-width: 0;
+  border: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+

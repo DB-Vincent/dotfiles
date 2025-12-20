@@ -10,3 +10,4 @@ My personal collection of config files for my Linux environments
 - [waybar](https://github.com/Alexays/Waybar): `rpm-ostree install waybar`
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/): `rpm-ostree install jetbrains-mono-fonts`
 - [nwg-look](https://github.com/nwg-piotr/nwg-look): `rpm-ostree install nwg-look`
+- [blueman](https://github.com/blueman-project/blueman): `rpm-ostree install blueman`
