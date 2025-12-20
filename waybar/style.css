@@ -30,7 +30,7 @@ tooltip {
 }
 
 #workspaces button {
-  color: @accent;
+  color: @fg;
   border-radius: 6px;
   background: transparent;
   transition: all 0.2s ease-in-out;
@@ -39,7 +39,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  color: @accent;
+  color: @fg;
   background-color: rgba(153, 209, 219, 0.1);
   box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2);
 }
