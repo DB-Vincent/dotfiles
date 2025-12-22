@@ -1,0 +1,20 @@
+# By default, ignore everything
+*
+*/
+
+# Add this file
+!.gitignore
+
+# Add directories that should be pushed
+!nvim/
+!nvim/**
+!hypr/
+!hypr/**
+!gtk-*/
+!gtk-*/**
+!kitty/
+!kitty/**
+!nwg-look/
+!nwg-look/**
+!waybar/
+!waybar/**
