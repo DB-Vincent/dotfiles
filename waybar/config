@@ -51,24 +51,23 @@
   },
 
   "cpu": {
-    "format": "󰍛 {usage}%"
+    "format": " {usage}%"
   },
     
   "memory": {
-    "format": " {used:0.1f}G/{total:0.1f}G",
+    "format": "  {used:0.1f}G/{total:0.1f}G",
     "tooltip": false
   },
 
   "network": {
-    "format-ethernet": "󰈀",
+    "format-ethernet": "",
     "tooltip-format": "{ifname}: {ipaddr}/{cidr} via {gwaddr}",
   },
 
   "bluetooth": {
-    "format-on": "󰂯",
-    "format-off": "󰂲",
-    "format-disabled": "",
-    "format-connected": "󰂱 {num_connections}",
+    "format-on": "",
+    "format-off": " off",
+    "format-connected": " {num_connections}",
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "on-click": "blueman-manager"
