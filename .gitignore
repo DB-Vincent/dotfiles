@@ -18,3 +18,5 @@
 !nwg-look/**
 !waybar/
 !waybar/**
+!dunst/
+!dunst/**

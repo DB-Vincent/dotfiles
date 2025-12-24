@@ -11,3 +11,5 @@ My personal collection of config files for my Linux environments
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/): `sudo dnf copr enable che/nerd-fonts && sudo dnf install nerd-fonts`
 - [nwg-look](https://github.com/nwg-piotr/nwg-look): `sudo dnf install nwg-look`
 - [blueman](https://github.com/blueman-project/blueman): `sudo dnf install blueman`
+- [dunst](https://github.com/dunst-project/dunst): `sudo dnf install dunst`
+- [dmenu](https://github.com/ocfox/dmenu): `sudo dnf install dmenu`
