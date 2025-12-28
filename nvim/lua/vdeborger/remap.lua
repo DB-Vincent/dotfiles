@@ -28,12 +28,17 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]]) -- Delete selected text without
 -- Buffers (tabs)
 vim.keymap.set("n", "<Tab>", "<Cmd>BufferNext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferPrevious<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>q", "<Cmd>BufferClose<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>q", "<Cmd>BufferClose<CR>", { noremap = true, silent = true, desc = "Close buffer" })
 
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format) -- Format current buffer using LSP
+vim.keymap.set("n", "<leader>f", function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = "Format buffer" }) -- Format current buffer using LSP
 
--- Tmux
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>") -- New session
+-- LSP Diagnostics
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
+vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Diagnostics to loclist" })
 
 -- Reload current file
 vim.keymap.set("n", "<leader><leader>", function()
@@ -84,3 +89,4 @@ end, { desc = "Git blame" })
 vim.keymap.set("n", "<leader>wk", function()
     require("which-key").show()
 end, { desc = "Show which-key" })
+
