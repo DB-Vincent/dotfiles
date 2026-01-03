@@ -23,21 +23,31 @@
   ],
 
   "hyprland/workspaces": {
+    "on-click": "activate",
     "format": "{icon}",
-    "format-window-separator": "",
     "format-icons": {
-      "active": "",
-      "default": "",
-      "empty": "",
-      "urgent": ""
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "󱓻",
+      "urgent": "󱓻"
     },
     "persistent-workspaces": {
-      "*": 3, 
-    },
+      "1": [],
+      "2": [],
+      "3": []
+    }
   },
 
   "clock": {
-    "format": "{:%a %d %b  %H:%M}",
+    "format": " {:%a %d %b  %H:%M}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "year",
@@ -79,9 +89,4 @@
     "format-muted": "  muted",
     "scroll-step": 5
   },
-
-  "tray": {
-    "icon-size": 18,
-    "spacing": 8
-  }
 }
