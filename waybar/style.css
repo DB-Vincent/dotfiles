@@ -25,14 +25,13 @@ tooltip {
 
 /* --- Waybar Container --- */
 #waybar {
-  background: @bg;
+  background: transparent;
   color: @fg;
   border-radius: 10px;
 }
 
 /* --- Right modules --- */
 #workspaces {
-  background-color: transparent;
   margin-left: 4px;
 }
 
@@ -44,9 +43,9 @@ tooltip {
   box-shadow: inset 0 -3px transparent;
   /* Use box-shadow instead of border so the text isn't offset */
   padding: 4px 14px;
-  margin: 4px 3px;
+  margin: 0px 3px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: @bg;
 }
 
 #workspaces button.active {
@@ -56,7 +55,7 @@ tooltip {
 /* --- Center modules --- */
 #clock {
   border-radius: 5px;
-  margin: 4px 3px;
+  margin: 0px 3px;
   padding: 4px 14px;
   background-color: @magenta;
   color: @bg;
@@ -69,9 +68,9 @@ tooltip {
 #bluetooth,
 #pulseaudio {
   border-radius: 5px;
-  margin: 4px 3px;
+  margin: 0px 3px;
   padding: 4px 14px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: @bg;
 }
 
 #cpu {
