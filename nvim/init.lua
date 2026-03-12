@@ -1,1 +1,2 @@
-require("vdeborger")
+require("vdeborger.core")
+require("vdeborger.lazy")

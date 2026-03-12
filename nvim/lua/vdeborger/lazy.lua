@@ -12,6 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	spec = "vdeborger.lazy",
+	spec = "vdeborger.plugins",
 	change_detection = { notify = false },
 })
