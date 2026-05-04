@@ -1,0 +1,6 @@
+vim.pack.add({
+	"https://github.com/nvimdev/dashboard-nvim",
+	"https://github.com/nvim-tree/nvim-web-devicons",
+})
+
+require("dashboard").setup({})
